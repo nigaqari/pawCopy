@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawdoption</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/about.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light p-md-3">
+        <div class="container">
+          <img class="logo" src="./images/pngwing.com.png" alt="logo" />
+          <h1>Pawdoption</h1>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><i class="fa-solid fa-house"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adopt.html"
+                ><i class="fa-solid fa-paw"></i>Adopt Now</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html"
+                ><i class="fa-solid fa-gear"></i>Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html"
+                ><i class="fa-solid fa-circle-info"></i>About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="search-container">
+          <form action="search-results.html" method="GET">
+            <input
+              type="text"
+              name="query"
+              placeholder="Search for pets..."
+              class="search-input"
+            />
+            <button
+              type="submit"
+              class="search-button"
+              style="margin-left: 48px; margin-right: 2px; margin-top: 5px"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div class="section-2">
+      <div class="container">
+        <div class="col-12">
+          <h1 class="abouts">About Us</h1>
+          <p>
+            At Pawdoption, we believe every pet deserves a loving home, and
+            every family deserves the joy of adopting a furry friend. Our
+            mission is simple: to connect pets in need of a forever home with
+            compassionate families ready to make a difference in their lives.
+            Whether you’re looking for a playful pup, a cuddly kitten, or a
+            curious rabbit, we’re here to guide you through the adoption process
+            with ease and care.
+          </p>
+          <div class="col-12">
+            <h1 class="abouts">
+              Everything for pets & pet parents in one place.
+            </h1>
+            <p>
+              Wherever you are in your pet parenting journey: from choosing and
+              finding a pet to already loving & caring for pets, all the way
+              through to saying goodbye… PetPlace is here to support you every
+              step of the way. We know how happy, healthy, and busy your pets
+              keep you, so with all the resources, videos, articles, services,
+              products, advice, opinions, and ideas out there, we thought you
+              could use a good place to start. You’ll find sound advice, trusted
+              providers, and indispensable services here, all in one place.
+              Because every pet deserves to be well cared for, by companions who
+              return their love and dedication.
+            </p>
+          </div>
+          <div class="graph-container">
+            <h1>Number of Pets Adopted Over the Years</h1>
+            <canvas
+              id="adoptedOverYearsChart"
+              width="400"
+              height="200"
+            ></canvas>
+          </div>
+
+          <script>
+            const adoptedOverYearsChart = new Chart(
+              document.getElementById("adoptedOverYearsChart"),
+              {
+                type: "line", // Line chart
+                data: {
+                  labels: ["2018", "2019", "2020", "2021", "2022", "2023"], // Years
+                  datasets: [
+                    {
+                      label: "Pets Adopted",
+                      data: [120, 200, 320, 450, 500, 600], // Number of pets adopted in each year
+                      backgroundColor: "rgba(54, 162, 235, 0.2)", // Light blue background for the line
+                      borderColor: "rgba(54, 162, 235, 1)", // Blue border for the line
+                      borderWidth: 2,
+                      fill: true, // Fill the area under the line
+                      tension: 0.4, // Smooth the line curve
+                    },
+                  ],
+                },
+                options: {
+                  responsive: true,
+                  animation: {
+                    duration: 1500, // Duration for the graph to draw
+                    easing: "easeInOutQuad", // Animation easing function
+                  },
+                  plugins: {
+                    legend: {
+                      display: true,
+                      position: "top",
+                    },
+                  },
+                  scales: {
+                    y: {
+                      beginAtZero: true, // Start the Y-axis at 0
+                      title: {
+                        display: true,
+                        text: "Number of Pets Adopted", // Y-axis label
+                      },
+                    },
+                    x: {
+                      title: {
+                        display: true,
+                        text: "Year", // X-axis label
+                      },
+                    },
+                  },
+                  hover: {
+                    mode: "nearest", // Hover effect activates when close to the nearest point
+                    intersect: false, // Hover effect works without directly on the point
+                    animationDuration: 500, // Duration for hover effect
+                  },
+                  tooltips: {
+                    enabled: true, // Enable tooltips on hover
+                    mode: "index", // Display tooltip for the dataset as a whole
+                    intersect: false, // Tooltip displays when hovering near a point
+                    backgroundColor: "rgba(0, 0, 0, 0.7)", // Background color of the tooltip
+                    titleColor: "#fff", // Title text color
+                    bodyColor: "#fff", // Body text color
+                    callbacks: {
+                      label: function (tooltipItem) {
+                        return `${tooltipItem.dataset.label}: ${tooltipItem.raw} Pets`; // Customize tooltip label
+                      },
+                    },
+                  },
+                },
+              }
+            );
+          </script>
+        </div>
+
+        <div class="col-12">
+          <div class="graph-container-2">
+            <h1>Customer Feedback on Veterinary Services</h1>
+            <canvas id="feedbackChart" width="400" height="200"></canvas>
+          </div>
+          <script>
+            // Data for the feedback chart
+            const feedbackData = {
+              labels: ["1 Star", "2 Stars", "3 Stars", "4 Stars", "5 Stars"],
+              datasets: [
+                {
+                  label: "Feedback Count",
+                  data: [5, 8, 15, 25, 30], // Replace these values with your actual data
+                  backgroundColor: [
+                    "rgba(255, 99, 132, 0.5)", // Light red
+                    "rgba(255, 159, 64, 0.5)", // Orange
+                    "rgba(255, 205, 86, 0.5)", // Yellow
+                    "rgba(75, 192, 192, 0.5)", // Teal
+                    "rgba(54, 162, 235, 0.5)", // Blue
+                  ],
+                  borderColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(255, 159, 64, 1)",
+                    "rgba(255, 205, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(54, 162, 235, 1)",
+                  ],
+                  borderWidth: 1,
+                },
+              ],
+            };
+
+            const feedbackConfig = {
+              type: "bar",
+              data: feedbackData,
+              options: {
+                responsive: true,
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                  },
+                },
+              },
+            };
+
+            // Render the feedback chart
+            const feedbackChart = new Chart(
+              document.getElementById("feedbackChart"),
+              feedbackConfig
+            );
+          </script>
+        </div>
+
+        <div class="col-12">
+          <div class="graph-container-2">
+            <h1>Pet Categories Adopted</h1>
+            <canvas id="categoryChart" width="400" height="200"></canvas>
+          </div>
+          <script>
+            const categoryChart = new Chart(
+              document.getElementById("categoryChart"),
+              {
+                type: "bar",
+                data: {
+                  labels: ["Cats", "Dogs", "Birds", "Rabbits"], // Categories of pets
+                  datasets: [
+                    {
+                      label: "Number of Pets Adopted",
+                      data: [150, 300, 50, 75], // Number of pets adopted in each category
+                      backgroundColor: "rgba(75, 192, 192, 0.2)", // Light green for bar color
+                      borderColor: "rgba(75, 192, 192, 1)", // Dark green for bar border color
+                      borderWidth: 1,
+                    },
+                  ],
+                },
+                options: {
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      display: true,
+                      position: "top",
+                    },
+                  },
+                  scales: {
+                    y: {
+                      beginAtZero: true,
+                      title: {
+                        display: true,
+                        text: "Number of Pets Adopted",
+                      },
+                    },
+                    x: {
+                      title: {
+                        display: true,
+                        text: "Pet Categories",
+                      },
+                    },
+                  },
+                },
+              }
+            );
+          </script>
+        </div>
+      </div>
+
+      <script>
+        const adoptionChart = new Chart(
+          document.getElementById("adoptionChart"),
+          {
+            type: "bar",
+            data: {
+              labels: ["2018", "2019", "2020", "2021", "2022", "2023"],
+              datasets: [
+                {
+                  label: "Pets Adopted",
+                  data: [120, 200, 320, 450, 500, 600],
+                  backgroundColor: "rgba(54, 162, 235, 0.2)", // Light blue
+                  borderColor: "rgba(54, 162, 235, 1)", // Dark blue
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  display: true,
+                  position: "top",
+                },
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: "Number of Pets Adopted",
+                  },
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: "Year",
+                  },
+                },
+              },
+            },
+            plugins: [
+              {
+                // Add hover effect to change the bar color
+                afterEvent: function (chart, event) {
+                  if (event.type === "mousemove") {
+                    const dataset = chart.data.datasets[0];
+                    dataset.backgroundColor = dataset.backgroundColor.map(
+                      (color) => "rgba(54, 100, 200, 0.2)" // Darker blue on hover
+                    );
+                    chart.update();
+                  } else if (event.type === "mouseout") {
+                    const dataset = chart.data.datasets[0];
+                    dataset.backgroundColor = dataset.backgroundColor.map(
+                      (color) => "rgba(54, 162, 235, 0.2)" // Original color after hover
+                    );
+                    chart.update();
+                  }
+                },
+              },
+            ],
+          }
+        );
+      </script>
+    </div>
+
+    <footer class="footer bg-dark text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>About Us</h5>
+            <p>
+              Pawdoption is dedicated to helping pets find loving homes. Join us
+              in making a difference for animals in need.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-light text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="adopt.html" class="text-light text-decoration-none"
+                  >Adopt Now</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-light text-decoration-none"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Pet Lane, Los Angeles,
+                CA
+              </li>
+              <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+              <li><i class="fas fa-envelope"></i> contact@pawdoption.com</li>
+            </ul>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-facebook fa-lg"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-instagram fa-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <p class="mb-0">© 2024 Pawdoption. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

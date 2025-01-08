@@ -1,0 +1,524 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+    
+  }
+
+.header{
+    background-color: #f5e502;
+    background-size:cover ;
+    background-position:center ;
+    height: 125px;
+    position: relative; 
+    
+    
+    h1{
+      font-size: 2.5rem;
+      margin-right: 141px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: bolder;
+    }
+  }
+
+.homeicon{
+  height: 39px;
+  width: 38px;
+  vertical-align: top;
+
+  img{
+    vertical-align: top;
+  }
+}
+
+
+
+
+
+
+
+.servicesicon{
+  height: 33px;
+  width: 33px;
+  vertical-align: text-top;
+}
+
+.abouticon{
+  height: 20px;
+  width: 20px;
+  vertical-align: text-top;
+}
+
+
+
+
+
+  .logo{
+    
+    height: 82px;
+    width: 128px;
+    margin-left: -169px;
+    }
+
+
+    .logo {
+      width: 100px; /* Adjust size as needed */
+      transition: transform 0.5s ease-in-out; /* Smooth animation */
+    }
+  
+    .logo:hover {
+      transform: scale(1.2) rotate(360deg); /* Enlarge and slightly rotate */
+    }
+
+
+  
+  
+  .navbar{
+    font-size: 30px;    
+    width: 100%;
+    position: absolute;
+    top: 0;
+    color: black;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px rgba(119, 119, 119, 0.2);
+  }
+
+  .nav-link {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+   
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
+  }
+  
+  .nav-link:hover {
+    
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+  .navbar-nav .nav-link{
+    margin-right: 60px;
+  }
+
+  .navbar-nav{
+    margin-right: 50px;
+  }
+
+  
+
+
+  /* Search Bar Styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  border-radius: 20%;
+
+
+  form{
+    margin-left: -165px;
+  }
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px 25px 25px 25px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #f5e502;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.search-button:hover {
+  background-color: #bcc630e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  border-radius: 20%;
+}
+
+.search-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px 40px 10px 10px; /* Add padding-right to create space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 25px 25px 25px 25px;
+  font-size: 16px;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px; /* Position the button inside the input */
+  background-color: transparent;
+  color: #555;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.search-button i {
+  pointer-events: none; /* Prevents the icon from triggering events */
+}
+
+.search-button:hover {
+  color: #bcc630e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the section */
+.section {
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0; /* Start with opacity 0 */
+}
+
+  .section{
+    margin-top: 120px;
+    background-color: white;
+    margin-bottom: 152px;
+
+    .col-md-6 col-12 col-auto{
+        margin-bottom: 200px;
+      }
+
+      h2{
+  font-size: 75px;
+
+   }
+
+
+   b{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+      img{
+        width: 640px;
+        height: 490px;
+        margin-top: 20px;
+        margin-left: -50px;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Horizontal, Vertical, Blur Radius, Color */
+        transition: box-shadow 0.3s ease; 
+        
+        
+      }
+  }
+
+
+
+
+
+.section-2{
+
+  background-color:#fff7e6 ;
+  margin-top: 20px;
+  
+  .start{
+    font-size: 70px;
+    margin-top: 16px;
+    margin-bottom: 360px;
+    margin-right: 18px;
+    margin-left: -75px;
+
+
+  }
+
+  h2{
+    font-size: 3rem;
+        margin-top: 40px;
+    }
+p{
+  font-size: 26px;
+}
+
+img{
+  margin-top: -325px;
+  margin-left: -70px;
+  width: 622px;
+  height: 400px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+        
+}
+
+  }
+
+
+
+#btn_Sec{
+  margin-top: 0px;
+  margin-bottom: 39px;
+  padding: 22px;
+  margin-left: 805px;
+}
+
+
+
+
+
+
+
+
+
+  .section-4{
+
+    background-color: #35396a;
+    color: white;
+    height: 492px;
+
+    .btn{
+      margin-left: 0px;
+      margin-top: 32px;
+      font-size: 27px;
+      padding: 11px;
+      background-color: #D7CC03;
+      
+    }
+    img{
+      height: 344px;
+      margin-left: 67px;
+      margin-top: 72px;
+    
+    }
+
+    h2{
+      margin-top: 60px;
+      margin-left: 0px;
+      margin-bottom: 30px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+
+  .gr{
+    width: 1100px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+
+}
+
+
+
+
+
+.footer{
+  background-color: #000000;
+}
+
+
+
+
+
+  .btn{
+    background-color: #e0f000e0;
+    color: rgb(0, 0, 0);
+    padding: 17px 100px;
+    border: none;
+    border-radius: 80px;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3 ease;
+    margin-bottom: 10px;
+    margin-top: -170px;
+    margin-left: 650px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+    }
+    .btn:hover{
+      background-color: #d7cc00;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05); /* Slightly enlarge the button on hover */
+      transition: all 0.3s ease;
+    
+    }
+    .btn:focus{
+      outline: none;
+    }
+
+    
+    .footer {
+      background-color: #000; /* Dark background for contrast */
+      color: #f8f9fa; /* Light text for readability */
+    }
+    
+    .footer h5 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .footer p,
+    .footer ul li {
+      font-size: 0.9rem;
+    }
+    
+    .footer .social-icons a {
+      color: #f8f9fa;
+      transition: color 0.3s ease;
+    }
+    
+    .footer .social-icons a:hover {
+      color: #f5e502; /* Highlight on hover */
+    }
+    
+    .footer ul {
+      padding: 0;
+    }
+    
+    .footer ul li {
+      list-style: none;
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer ul li i {
+      margin-right: 8px;
+    }
+    
+    
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .pet-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .pet-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .pet-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .card-body {
+      padding: 16px;
+    }
+    
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    .card-text {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    
+    .card-location {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    
+
+
+    
+
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(50px); /* Slide from below */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* Original position */
+      }
+    }
+    
+    /* Apply animations to text and image */
+    .section-4 .col-6 {
+      opacity: 0; /* Start hidden */
+      animation: fadeInSlide 1.5s ease-out forwards;
+    }
+    
+    /* Delayed animation for the second column */
+
+
+    .section-4 .col-6 {
+      opacity: 0; /* Start hidden */
+      animation: fadeInSlide 2.0s ease-out forwards;
+      animation-play-state: paused; /* Pause animation until triggered */
+    }
+
+
+    .section-2 {
+      opacity: 0; /* Initially hidden */
+      transform: translateX(-100%); /* Start the section off-screen to the left */
+      animation: slideInLeft 2.8s ease-out forwards; /* Apply the left slide-in animation */
+    }
+    
+    /* Keyframes for the slide-in effect */
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Start off-screen to the left */
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0); /* End in normal position */
+      }
+    }
+    
+    /* Optional: Add hover effect on the button */
+    #btn_Sec:hover {
+      background-color: #e6e634; /* Change button background on hover */
+      color: rgb(0, 0, 0); /* Change button text color */
+      transform: scale(1.05); /* Slightly enlarge the button on hover */
+      transition: all 0.3s ease;
+    }

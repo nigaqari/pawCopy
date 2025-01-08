@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawdoption</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link rel=”stylesheet”
+    href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/contact.css" />
+    
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light p-md-3">
+        <div class="container">
+          <img class="logo" src="./images/pngwing.com.png" alt="logo" />
+          <h1>Pawdoption</h1>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><i class="fa-solid fa-house"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adopt.html"
+                ><i class="fa-solid fa-paw"></i>Adopt Now</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html"
+                ><i class="fa-solid fa-gear"></i>Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html"
+                ><i class="fa-solid fa-circle-info"></i>About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="search-container">
+          <form action="search-results.html" method="GET">
+            <input
+              type="text"
+              name="query"
+              placeholder="Search for pets..."
+              class="search-input"
+            />
+            <button
+              type="submit"
+              class="search-button"
+              style="margin-left: 48px; margin-right: 2px; margin-top: 5px"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4><b>Find Your Perfect Companion</b></h4>
+            <p>
+              Fill out the form below to help us match you with your ideal pet. Our representative will reach out to assist you with the process.
+            </p>
+            <form id="adoptionForm">
+              <div class="mb-3 mt-3">
+                <label for="name" class="form-label"
+                  >Name <span style="color: red">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Your Name"
+                  name="name"
+                />
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="email">Email Address<span style="color: red"> *</span></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter Your Email Address"
+                  name="email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone">Phone Number<span style="color: red"> *</span></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter Your Phone Number"
+                  name="phone"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="preferred-pet">Type of Pet<span style="color: red"> *</span></label><br>
+                <select class="required form-control" name="preferred_pet" id="preferred-pet">
+                  <option value="">-- Select Pet Type --</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="rabbit">Rabbit</option>
+                  <option value="bird">Bird</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="age-preference">Preferred Pet Age<span style="color: red"> *</span></label><br>
+                <select class="required form-control" name="age_preference" id="age-preference">
+                  <option value="">-- Select Age Range --</option>
+                  <option value="puppy/kitten">Puppy/Kitten</option>
+                  <option value="young">Young</option>
+                  <option value="adult">Adult</option>
+                  <option value="senior">Senior</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="adoption-purpose">Why Do You Want to Adopt?<span style="color: red"> *</span></label>
+                <textarea
+                  class="form-control"
+                  id="adoption-purpose"
+                  placeholder="Tell us why you'd like to adopt a pet"
+                  name="adoption_purpose"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="home-environment">Describe Your Home Environment<span style="color: red"> *</span></label>
+                <textarea
+                  class="form-control"
+                  id="home-environment"
+                  placeholder="E.g., fenced yard, apartment, other pets"
+                  name="home_environment"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="experience">Do You Have Previous Pet Experience?<span style="color: red"> *</span></label><br>
+                <select class="required form-control" name="experience" id="experience">
+                  <option value="">-- Select an Option --</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="additional-details">Additional Comments</label>
+                <textarea
+                  class="form-control"
+                  id="additional-details"
+                  placeholder="Share any additional details or preferences"
+                  name="additional_details"
+                  rows="3"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="downloadBtn"
+              >
+                Submit
+              </button>
+              
+         
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+  <footer class="footer bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <!-- About Us -->
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>
+            Pawdoption is dedicated to helping pets find loving homes. Join us
+            in making a difference for animals in need.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="index.html" class="text-light text-decoration-none"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="adopt.html" class="text-light text-decoration-none"
+                >Adopt Now</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="text-light text-decoration-none"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="text-light text-decoration-none"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 123 Pet Lane, Los Angeles,
+              CA
+            </li>
+            <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+            <li><i class="fas fa-envelope"></i> contact@pawdoption.com</li>
+          </ul>
+          <div class="social-icons mt-3">
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-facebook fa-lg"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-twitter fa-lg"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-instagram fa-lg"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p class="mb-0">© 2024 Pawdoption. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  document.querySelector("#downloadBtn").addEventListener("click", function (event) {
+        const form = document.getElementById("adoptionForm");
+        const formData = new FormData(form);
+
+        // Create a string with all form data
+        let textData = "Adoption Form Data:\n\n";
+        formData.forEach((value, key) => {
+          textData += `${key}: ${value}\n`;
+        });
+
+        // Create a blob and a link to download the text file
+        const blob = new Blob([textData], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "adoption_form_data#.txt";
+        link.click();
+
+        // Display an alert when the form is submitted
+        alert("Thank you for submitting the adoption form!, Our representative will reach out to you soon");
+      });
+  </script>
+  </body>
+</html>
